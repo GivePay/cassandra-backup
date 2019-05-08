@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  backup:
+    build: '.'
+    image: givepay/cassandra-backup
+    depends_on:
+      - cassandra
+    environment:
+      - asdf=asdf
+    command: ''
+  cassandra:
+    image: cassandra
